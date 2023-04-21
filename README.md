@@ -1,8 +1,8 @@
 <h6>2023-1-OSSPrac-Acha-8</h6>
 <br>
-<h1>📚Team Acha!</h1>
+<h1>📚Team Acha!📚</h1>
+<h2>📍Introduce</h2>
 
-<h3>📍Introduce</h3>
 |      |  이름  |       학과       |
 |:----:|:------:|:----------------:|
 | 팀장 | 천기정 | 산업시스템공학과 |
