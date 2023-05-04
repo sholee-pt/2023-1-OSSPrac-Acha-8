@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    
+    <title>main page</title>
+    <script>
+        function validateForm(){
+            var name = document.getElementById('Name').value;
+            var studentNumber = document.getElementById('StudentNumber').value;
+            var major = document.getElementById('Major').value;
+            var emailId = document.getElementById('Email_id').value;
+            var emailAddr = document.getElementById('Email_addr').value;
+            
+            if (name == "" || studentNumber == "" || major == "" || emailId == "" || emailAddr=== ""){
+                alert('필수 정보를 모두 입력해주세요!');
+                return false;
+            } else {
+                return true;
+            }
+        }
+    </script>
+</head>
+<body>
+    <form method="POST" onsubmit="return validateForm()" action= "/result">
+        
+        <p><b>* Name</b> <input type="text" id="Name" name="Name"/> </p>
+        <p><b>* Student Number</b> <input type="text" id="StudentNumber" name="StudentNumber" /></p>
+        <p><b>* Major</b> <input type="text" id="Major" name="Major" /></p>
+        <div class="email">
+            <p><b>* Email</b> <input type="text" id="Email_id" name="Email_id" /> @ <input list="domain" name="Email_addr" id="Email_addr" placeholder="선택"></p>
+            <datalist id="domain">
+                <option value="naver.com"></option>
+                <option value="gmail.com"></option>
+                <option value="daum.net"></option>
+            </datalist>
+        </div>
+        <div class="gender">
+            <p>Gender</p>
+            <input type="radio" name="Gender" value="Male" />Male 
+            <input type="radio" name="Gender" value="Female"/>Female
+        </div>
+        <div class="PL_list">
+            <p>Programming Languages</p>
+            <label><input type="checkbox" value="Python" name="PL_list" />Python</label>
+            <label><input type="checkbox" value="Java" name="PL_list" />Java</label>
+            <label><input type="checkbox" value="HTML" name="PL_list" />HTML</label>
+            <label><input type="checkbox" value="C++" name="PL_list"/>C++</label>
+        </div>
+        <br>
+        <p><button type='submit' value="submit">submit</button></p>
+        
+    </form>
+    
+    
+</body>
+</html>
