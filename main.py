@@ -26,15 +26,5 @@ def result():
             rows = [{}]
         return render_template('result.html',rows=rows)
 
-@app.route('/add', methods=['GET', 'POST'])
-def add():
-    global rows
-    if request.method == 'POST':        
-        if 'add_row' in request.form:
-            # add a new empty row
-            rows.append({})
-        return render_template('main.html')
-
-
 if __name__ == '__main__':
     app.run(debug=True, port=8000)
