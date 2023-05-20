@@ -4,3 +4,7 @@ services:
   python-app:
     build: .
     image: yyh-python-app:3.0
+    ports:
+      - "80:80"
+    volumes:
+      - ./app:/app
