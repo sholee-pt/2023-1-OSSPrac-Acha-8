@@ -1,9 +1,10 @@
 #docker-compose.yml
 version: "3.0"
+
 services:
   python-app:
     build: .
-    image: yyh-python-app:3.0
+    image: ${DOCKER_USR}/hw6_acha:${BUILD_NUMBER}
     ports:
       - "80:80"
     volumes:
