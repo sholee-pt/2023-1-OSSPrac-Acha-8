@@ -1,11 +1,10 @@
-#docker-compose.yml
-version: "3.0"
+version: "3.0"    # tag 명
 
-services:
-  python-app:
-    build: .
-    image: ${DOCKER_USR}/hw6_acha:${BUILD_NUMBER}
-    ports:
-      - "80:80"
+services:         # 기본 문법
+  python-app:     # services 명
+    build: .      # Dockerfile의 경로
+    image: ${DOCKER_USR}/hw6_acha
+    ports:     
+      - "80:80"   # 포트 번호를 이어줌
     volumes:
       - ./app:/app
